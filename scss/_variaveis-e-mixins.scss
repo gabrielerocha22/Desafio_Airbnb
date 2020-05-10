@@ -1,0 +1,47 @@
+$cor-titulo: #ff385c;
+$cor-botao: #e41d59;
+$cor-texto: #3a3a3a;
+// fonte
+$fonte-1: Circular,
+-apple-system,
+BlinkMacSystemFont,
+Roboto,
+Helvetica Neue,
+sans-serif;
+$fonte-2: inherit;
+//converte pixel em em
+@function em($pixel, $contexto: 16) {
+    @return $pixel / $contexto+em;
+}
+
+@mixin tipo-1($size) {
+    font-family: $fonte-1;
+    @if $size==14 {
+        font-size: em(14);
+        line-height: em(24, 14);
+    }
+    @else if $size==16 {
+        font-size: em(16);
+        line-height: em(24, 16);
+    }
+    @else if $size==18 {
+        font-size: em(18);
+        line-height: em(30, 18);
+    }
+    @else if $size==24 {
+        font-size: em(24);
+        line-height: (30, 24);
+    }
+    @else if $size==36 {
+        font-size: em(36);
+        line-height: em(40, 36);
+    }
+}
+
+@mixin tipo-2($size) {
+    font-family: $fonte-2;
+    @if $size==18 {
+        font-size: em(18);
+        line-height: (30, 18);
+    }
+}

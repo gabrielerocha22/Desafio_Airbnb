@@ -1,0 +1,54 @@
+.header {
+    background-color: white;
+    height: 80px;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 3px 3px 3px lightgray;
+    @include d(s) {
+        height: 180px;
+        @include tipo-1(14);
+        position: relative;
+        img {
+            margin: 0 auto;
+        }
+    }
+}
+
+.header_logo {
+    margin: 20px auto;
+    @include d(s) {
+        margin: 20px auto;
+    }
+}
+
+.header_menu {
+    border-radius: 30px;
+    height: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 2px lightgray;
+    margin-top: 10px;
+    button {
+        display: inline-block;
+        background-color: white;
+        border: none;
+        height: 50px;
+        flex-grow: 1;
+        font-weight: bold;
+        @include tipo-1(14);
+    }
+    button img {
+        max-height: 50px;
+        display: inline-block;
+    }
+    &:hover {
+        box-shadow: 3px 3px 3px lightgray;
+    }
+    @include d(m) {
+        width: 600px;
+    }
+    @include d(s) {
+        height: 100px;
+    }
+}

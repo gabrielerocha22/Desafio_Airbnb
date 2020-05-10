@@ -1,0 +1,33 @@
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.titulo {
+    @include tipo-1(18);
+    text-transform: uppercase;
+    @include d(s) {}
+}
+
+a {
+    color: $cor-texto;
+    text-decoration: none;
+}
+
+h1 {
+    @include tipo-1(24);
+    color: $cor-titulo;
+    text-transform: uppercase;
+    margin-top: 120px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    @include d(s) {
+        @include tipo-1(18);
+        margin-top: 40px;
+        text-align: center;
+    }
+}
+
+p {
+    @include tipo-1(16);
+}
